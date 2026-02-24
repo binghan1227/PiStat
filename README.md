@@ -2,6 +2,8 @@
 
 Lightweight system monitoring dashboard for Raspberry Pi. Runs as a single Python process — no Docker, no databases to manage.
 
+![screenshot of the dashboard](img/screenshot.png)
+
 ## Quick Start
 
 **Prerequisite:** Python 3.11+
