@@ -7,4 +7,5 @@ init_db(config.database.path)
 app = create_app(config)
 
 if __name__ == "__main__":
-    app.run(host=config.server.host, port=config.server.port)
+    from waitress import serve
+    serve(app, host=config.server.host, port=config.server.port)
