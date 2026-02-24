@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PiStat — System Monitor</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>PiStat</h1>
+    <span id="last-updated" class="last-updated">—</span>
+  </header>
+
+  <main>
+    <section class="cards" id="cards">
+      <div class="card" id="card-cpu">
+        <div class="card-label">CPU</div>
+        <div class="card-value" id="val-cpu">—</div>
+        <div class="card-unit">%</div>
+      </div>
+      <div class="card" id="card-mem">
+        <div class="card-label">Memory</div>
+        <div class="card-value" id="val-mem">—</div>
+        <div class="card-unit">%</div>
+      </div>
+      <div class="card" id="card-temp">
+        <div class="card-label">CPU Temp</div>
+        <div class="card-value" id="val-temp">—</div>
+        <div class="card-unit">°C</div>
+      </div>
+      <div class="card" id="card-disk">
+        <div class="card-label">Disk</div>
+        <div class="card-value" id="val-disk">—</div>
+        <div class="card-unit">%</div>
+      </div>
+      <div class="card" id="card-load">
+        <div class="card-label">Load Avg</div>
+        <div class="card-value" id="val-load">—</div>
+        <div class="card-unit">1 / 5 / 15 min</div>
+      </div>
+      <div class="card" id="card-net">
+        <div class="card-label">Network</div>
+        <div class="card-value" id="val-net">—</div>
+        <div class="card-unit">↑ sent / ↓ recv</div>
+      </div>
+      <div class="card" id="card-uptime">
+        <div class="card-label">Uptime</div>
+        <div class="card-value" id="val-uptime">—</div>
+        <div class="card-unit"></div>
+      </div>
+    </section>
+
+    <section class="charts">
+      <div class="chart-container">
+        <h2>CPU Usage</h2>
+        <canvas id="chart-cpu"></canvas>
+      </div>
+      <div class="chart-container">
+        <h2>Memory Usage</h2>
+        <canvas id="chart-mem"></canvas>
+      </div>
+      <div class="chart-container">
+        <h2>CPU Temperature</h2>
+        <canvas id="chart-temp"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

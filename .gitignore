@@ -1,0 +1,31 @@
+# Database (contains collected metrics data)
+*.db
+*.db-shm
+*.db-wal
+
+# Virtual environment
+.venv/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pytest cache
+.pytest_cache/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Environment / secrets
+.env
+*.env
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo

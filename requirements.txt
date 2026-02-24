@@ -1,0 +1,5 @@
+psutil>=7.0
+flask>=3.0
+
+# Dev dependencies
+pytest>=8.0
