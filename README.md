@@ -140,13 +140,17 @@ Current configuration values as JSON.
 ## Running as a Service
 
 ```bash
-# Copy the unit file (edit WorkingDirectory and ExecStart paths if installed elsewhere)
-sudo cp pistat.service /etc/systemd/system/
+./install.sh            # install and start on boot
+./install.sh --uninstall  # stop and remove the service
+```
 
-sudo systemctl daemon-reload
-sudo systemctl enable pistat
-sudo systemctl start pistat
+The script auto-detects the install directory and current user — no path editing required.
+
+To check status or view logs:
+
+```bash
 sudo systemctl status pistat
+sudo journalctl -u pistat -f
 ```
 
 ## Architecture
