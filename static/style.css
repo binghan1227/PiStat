@@ -85,7 +85,7 @@ main {
 
 .charts {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
@@ -105,10 +105,16 @@ main {
   margin-bottom: 0.75rem;
 }
 
+.chart-wrapper { position: relative; height: 200px; }
+
 /* ── Responsive ── */
 
 @media (max-width: 900px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .charts { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {

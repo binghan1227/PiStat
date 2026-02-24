@@ -109,7 +109,7 @@ function makeChart(canvasId, label, color) {
     options: {
       animation: false,
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       scales: {
         x: {
           type: 'time',
